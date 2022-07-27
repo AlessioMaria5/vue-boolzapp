@@ -175,7 +175,7 @@ body {
 
 .CTlist {
 
-    height: 100%;
+    height: 70%;
     width: 100%;
     overflow: scroll; /* da fixare overflow */
 }
