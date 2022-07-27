@@ -10,11 +10,11 @@
 </head>
 <body>
 
-    <div id="#chatApp" class="container">
+    <div id="app" class="container">
         <section id="side-bar">
             <div class="UAbar">
                 <div class="UAprofile">
-                    <img src="img/avatar_1.jpg" alt="profile avatar">
+                    <img src="img/avatar_io.jpg" alt="profile avatar">
                     <span class="UAname">My Name</span>
                 </div>
 
@@ -39,13 +39,13 @@
                 <input type="text">
             </div>
             <div class="CTlist">
-                <div class="CTC">
+                <div v-for="(elemento, CTindex) in contacts" class="CTC">
                     <div class="CTCavatar">
-                        <img src="img/avatar_1.jpg" alt="profile avatar">
+                        <img :src="contacts[CTindex].avatar" alt="profile avatar">
                     </div>
 
                     <div class="CTnameMsg">
-                        <span class="CTCname">My Name</span>
+                        <span class="CTCname">{{contacts[CTindex].name}}</span>
                         <span class="CTlstmsg">Ultimo messaggio</span>
                     </div>
 
