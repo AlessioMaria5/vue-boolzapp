@@ -233,8 +233,11 @@ body {
 
 .displayCHAT {
 
+    display: flex;
+    flex-direction: column;
     background-image: url('../img/mine.jpg');
     height: 80%;
+
 }
 
 .inputCHAT {
@@ -262,7 +265,47 @@ body {
     border-radius: 2px;
     padding: 5px;
     outline: none;
-    
+
+}
+
+.Umsg {
+
+    align-self: flex-end;
+    position: relative;
+   
+    width: fit-content;
+    margin: 20px 50px 0px 0px;
+    padding: 20px;
+    padding-right: 100px;
+    background-color: var(--CHATmessageSENT);
+    border-radius: 20px;
+}
+
+.Umsg:after, .PCmsg:after {
+
+    content: '20:20';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+    color: var(--FONTprimaryColor);
+    font-size: 0.5em;
+ 
+}
+
+.PCmsg {
+
+    align-self: start;
+    position: relative;
+
+    width: fit-content;
+    margin: 20px 10px 10px 50px;
+    padding: 20px;
+    padding-right: 100px;
+    background-color: var(--CHATmessageREC);
+    border-radius: 20px;
+
 }
 
 /* MAIN CHAT */
