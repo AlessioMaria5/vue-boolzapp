@@ -4,11 +4,12 @@ var inizio = new Vue({
 
     data: {
 
+        indiceDisplay: 0,
         contacts: [
             {
                 name: 'Michele',
                 avatar: 'img/avatar_1.jpg',
-                visible: true,
+                visible: false,
                 messages: [
             {
                 date: '10/01/2020 15:30:55',
@@ -170,7 +171,28 @@ var inizio = new Vue({
 
     },
 
-    created: function(){
-        console.log(this.contacts)
+    methods: {
+
+        selectedCT(index) {
+
+            this.contacts[index].visible = !this.contacts[index].visible
+
+            for(i = 0 ; i < this.contacts.length ; i++){
+
+                if(this.contacts[i].visible == true) {
+
+                    this.contacts[i].visible == false
+                }
+
+                else if(this.contacts[i].visible == false){
+                    this.contacts[i].visible == true
+                }
+                
+                console.log(this.contacts[i].visible)
+            
+                
+            }
+           
+        }
     }
 })

@@ -22,6 +22,9 @@
     
 }
 
+
+
+
 body {
     /* da sistemare il gradient secondary */
     display: flex;
@@ -57,6 +60,9 @@ body {
     width: 75%;
     height: 100%;
     background-color: var(--CHATsecondaryColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 /* UA HEADER BAR SECTION */
@@ -231,12 +237,14 @@ body {
     border-left: .1px solid var(--FONTprimaryColor);
 }
 
+
+
 .displayCHAT {
 
     display: flex;
     flex-direction: column;
     background-image: url('../img/mine.jpg');
-    height: 80%;
+    flex-grow: 10;
 
 }
 
@@ -246,7 +254,8 @@ body {
     justify-content: space-evenly;
     align-items: center;
     height: 10%;
-    background-color: var(--CHATprimaryColor)
+    background-color: var(--CHATprimaryColor);
+    flex-grow: 1;
 }
 
 .inputCHAT .myMessage {
@@ -268,7 +277,7 @@ body {
 
 }
 
-.Umsg {
+.Umsg , .PCmsg {
 
     align-self: flex-end;
     position: relative;
@@ -279,6 +288,13 @@ body {
     padding-right: 100px;
     background-color: var(--CHATmessageSENT);
     border-radius: 20px;
+}
+
+.PCmsg {
+
+    align-self: start;
+    background-color: var(--CHATmessageREC);
+    margin: 20px 0px 0px 50px;
 }
 
 .Umsg:after, .PCmsg:after {
@@ -294,18 +310,21 @@ body {
  
 }
 
-.PCmsg {
+.hidden {
 
-    align-self: start;
-    position: relative;
+    display: none;
+}
 
-    width: fit-content;
-    margin: 20px 10px 10px 50px;
-    padding: 20px;
-    padding-right: 100px;
-    background-color: var(--CHATmessageREC);
-    border-radius: 20px;
+.show {
 
+    display: show;
+    
+}
+
+.show-CTC {
+
+    background-color: red;
+    color: red;
 }
 
 /* MAIN CHAT */
