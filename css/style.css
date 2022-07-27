@@ -224,3 +224,45 @@ body {
    
 }
 
+/* MAIN CHAT */
+
+.leftBorder {
+
+    border-left: .1px solid var(--FONTprimaryColor);
+}
+
+.displayCHAT {
+
+    background-image: url('../img/mine.jpg');
+    height: 80%;
+}
+
+.inputCHAT {
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 10%;
+    background-color: var(--CHATprimaryColor)
+}
+
+.inputCHAT .myMessage {
+    flex-grow: .8;
+}
+
+.inputCHAT button {
+
+    background: none;
+    border: none;
+}
+
+.inputCHAT .myMessage {
+
+    border: none;
+    border-radius: 2px;
+    padding: 5px;
+    outline: none;
+    
+}
+
+/* MAIN CHAT */
