@@ -4,3 +4,18 @@
     box-sizing: border-box;
 }
 
+:root {
+
+    --primaryColor : #009688;
+
+    --CHATprimaryColor : #EAEAEA;
+    --CHATsecondaryColor : #E6E2DE;
+    --CHATmessageSENT : #D5F9BA;
+    --CHATmessageREC : white;
+
+    --FONTprimaryColor : #B2B1B5;
+    --FONTsecondaryColor : #B2B1B1;
+    --FONTiconColor : #6B7376;
+    
+}
+
