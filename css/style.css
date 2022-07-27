@@ -23,7 +23,31 @@
 
 body {
     /* da sistemare il gradient secondary */
-    background-image: linear-gradient(var(--primaryColor) 20%,var(--CHATprimaryColor)20%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-image: linear-gradient(var(--primaryColor) 20%,var(--FONTiconColor)20%);
     height: 100vh;
 }
 
+.container {
+
+    display: flex;
+
+    width: 500px;
+    height: 600px;
+    background-color: red;
+}
+
+#side-bar {
+    width: 25%;
+    height: 100%;
+    background-color: var(--CHATprimaryColor);
+}
+
+#active-chat {
+    width: 75%;
+    height: 100%;
+    background-color: var(--CHATsecondaryColor);
+}
