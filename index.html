@@ -4,13 +4,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
     <title>Boolzapp</title>
 </head>
 <body>
 
     <div id="#chatApp" class="container">
-        <section id="side-bar"></section>
+        <section id="side-bar">
+            <div class="UAbar">
+                <div class="UAprofile">
+                    <img src="img/avatar_1.jpg" alt="profile avatar">
+                    <span class="UAname">My Name</span>
+                </div>
+
+                <div class="UAoption">
+                    <button class="OP-btn"><i class="fa-solid fa-rotate-right"></i></button>
+                    <button class="OP-btn"><i class="fa-solid fa-message"></i></button>
+                    <button class="OP-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </div>
+            </div>
+
+            <div class="ALERTsoft">
+                <div class="ALERTicon">
+                    <i class="fa-solid fa-bell-slash ALERTimg"></i>
+                </div>
+                <div class="ALERTmessage">
+                    <span>Ricevi notifiche di nuovi messaggi</span>
+                    <a href="#">Attiva notifiche desktop</a>
+                </div>
+            </div>
+            <div id="CTsrc">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text">
+            </div>
+            <div class="CTlist">
+                <div class="CTC">
+                    <div class="CTCavatar">
+                        <img src="img/avatar_1.jpg" alt="profile avatar">
+                    </div>
+
+                    <div class="CTnameMsg">
+                        <span class="CTCname">My Name</span>
+                        <span class="CTlstmsg">Ultimo messaggio</span>
+                    </div>
+
+                    <div class="CTCdata-hh">
+                        12.00
+                    </div>
+                </div>
+                
+            </div>
+        </section>
         <section id="active-chat"></section>
     </div>
 

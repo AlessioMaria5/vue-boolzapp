@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 :root {
@@ -26,8 +27,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    background-image: linear-gradient(
+        var(--primaryColor) 20%,
+        rgba(202, 185, 141, 0.2)20%, 
+        rgba(6, 87, 65, 0.4)100%);
+        background-repeat: no-repeat;
     
-    background-image: linear-gradient(var(--primaryColor) 20%,var(--FONTiconColor)20%);
+
     height: 100vh;
 }
 
@@ -35,15 +42,15 @@ body {
 
     display: flex;
 
-    width: 500px;
-    height: 600px;
-    background-color: red;
+    width: 1000px;
+    height: 80vh;
 }
 
 #side-bar {
-    width: 25%;
+    width: 35%;
     height: 100%;
-    background-color: var(--CHATprimaryColor);
+    background-color: white;
+    overflow: hidden;
 }
 
 #active-chat {
@@ -51,3 +58,169 @@ body {
     height: 100%;
     background-color: var(--CHATsecondaryColor);
 }
+
+/* UA HEADER BAR SECTION */
+
+.UAbar {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 50px;
+    padding: 5px;
+    background-color: var(--CHATprimaryColor);
+
+}
+
+.UAbar .UAprofile img{
+
+    border-radius: 50%;
+    width: 35px;
+    vertical-align: middle;
+}
+
+.UAbar .UAprofile .UAname {
+
+    line-height: 60px;
+    font-size: 0.7em;
+}
+
+.UAoption .OP-btn {
+    cursor: pointer;
+    border: none;
+    padding: 5px;
+    
+    background-color: rgba(0,0,0,0);
+    color: var(--FONTiconColor);
+}
+
+/* UA HEADER BAR SECTION */
+
+/* SOFT ALERT */
+
+.ALERTsoft {
+
+    background-color: var(--ALERTcolor);
+    display: flex;
+    justify-content: flex-start;
+    
+    padding: 10px;
+    gap: 5px;
+}
+
+.ALERTimg {
+
+    background-color: white;
+    color: var(--ALERTcolor);
+    padding:5px;
+    width: 30px;
+    height: 30px;
+    line-height: 20px;
+    border-radius: 50%;
+}
+
+
+.ALERTmessage {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.ALERTsoft .ALERTmessage span {
+    
+    font-size: 0.5em;
+    display: block
+    
+}
+
+.ALERTsoft .ALERTmessage a {
+
+    font-size: 0.5em;
+    display: block;
+    color: var(--FONTiconColor);
+   
+}
+
+/* SOFT ALERT */
+
+/* [ CT ] CONTACT */
+
+#CTsrc {
+
+    display: flex;
+    padding: 5px;
+    background-color: var(--CHATprimaryColor);
+}
+
+
+#CTsrc i {
+
+    padding: 10px 20px;
+    font-size: 10px;
+    color: var(--CHATsecondaryColor);
+    background-color: white;
+    border-radius: 3px 0px 0px 3px;
+}
+
+#CTsrc input {
+
+    width: 100%;
+
+    border: none;
+    border-left: .1px solid var(--CHATprimaryColor);
+    border-radius: 0px 3px 3px 0px;
+    outline: none;
+}
+
+.CTlist {
+
+    height: 100%;
+    width: 100%;
+    overflow: scroll; /* da fixare overflow */
+}
+
+.CTC {
+    display: flex;
+    position: relative;
+    height: 60px;
+    padding: 5px 10px;
+    background-color: white;
+    border-bottom: 0.1px solid var(--CHATsecondaryColor);
+
+}
+
+.CTC .CTCavatar img {
+
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 5px;
+   
+}
+
+.CTC .CTnameMsg {
+
+    align-self: flex-start;
+}
+.CTC .CTnameMsg .CTCname {
+
+    font-size: .6em;
+    display: block;
+}
+
+.CTC .CTnameMsg .CTlstmsg {
+
+    font-size: .4em;
+    display: block;
+}
+
+.CTC .CTCdata-hh {
+
+    font-size: .4em;
+   
+    position: absolute;
+    right: 10px;
+    top: 10px;
+   
+}
+
