@@ -16,6 +16,14 @@
     --FONTprimaryColor : #B2B1B5;
     --FONTsecondaryColor : #B2B1B1;
     --FONTiconColor : #6B7376;
+
+    --ALERTcolor : #8EDAFC;
     
+}
+
+body {
+    /* da sistemare il gradient secondary */
+    background-image: linear-gradient(var(--primaryColor) 20%,var(--CHATprimaryColor)20%);
+    height: 100vh;
 }
 
