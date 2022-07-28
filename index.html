@@ -39,7 +39,7 @@
                 <input type="text">
             </div>
             <div class="CTlist">
-                <div class="CTC" @click="selectedCT(CTindex)" v-for="(elemento, CTindex) in contacts">
+                <div class="CTC"  @click="selectedCT(CTindex)" v-for="(elemento, CTindex) in contacts" :class="contacts[CTindex].visible == true?'':'CTCmarked'">
                     <div class="CTCavatar">
                         <img :src="contacts[CTindex].avatar" :alt="contacts[CTindex].name">
                     </div>
@@ -79,7 +79,7 @@
                 class="displayCHAT">
                 
                     <div class="Umsg">Ciao</div>
-                    <div v-for="(elemento,index) in contacts.messages" class="PCmsg">{{this.message}}</div>
+                    <div class="PCmsg">{{contacts[index].messages[1].message}}</div>
             </div>
             <div class="inputCHAT">
                 <button class="OP-btn"><i class="fa-solid fa-face-smile"></i></button>

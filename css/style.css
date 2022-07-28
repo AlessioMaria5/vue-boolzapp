@@ -196,6 +196,11 @@ body {
 
 }
 
+.CTC:hover {
+
+    background-color: var(--CHATsecondaryColor);
+}
+
 .CTC .CTCavatar img {
 
     width: 40px;
@@ -318,6 +323,7 @@ body {
 .show {
 
     display: show;
+    background-color: red;
     
 }
 
@@ -325,6 +331,11 @@ body {
 
     background-color: red;
     color: red;
+}
+
+.CTCmarked {
+
+    background-color: var(--CHATsecondaryColor);
 }
 
 /* MAIN CHAT */

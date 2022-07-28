@@ -175,23 +175,21 @@ var inizio = new Vue({
 
         selectedCT(index) {
 
-            this.contacts[index].visible = !this.contacts[index].visible
+            for(let i = 0 ; i < this.contacts.length ; i++){
 
-            for(i = 0 ; i < this.contacts.length ; i++){
-
-                if(this.contacts[i].visible == true) {
-
-                    this.contacts[i].visible == false
+                if(this.contacts[i].visible == false){
+                    this.contacts[i].visible = true
+                        
                 }
-
-                else if(this.contacts[i].visible == false){
-                    this.contacts[i].visible == true
-                }
-                
-                console.log(this.contacts[i].visible)
-            
-                
+               
             }
+
+            if(this.contacts[index].visible == true) {
+
+                this.contacts[index].visible = false
+            }
+    
+            
            
         }
     }
