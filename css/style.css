@@ -166,7 +166,7 @@ body {
     font-size: 10px;
     color: var(--CHATsecondaryColor);
     background-color: white;
-    border-radius: 3px 0px 0px 3px;
+    border-radius: 3px 0px 0px 3xpx;
 }
 
 #CTsrc input {
@@ -246,12 +246,17 @@ body {
 
 .displayCHAT {
 
-    display: flex;
-    flex-direction: column;
+
     background-image: url('../img/mine.jpg');
     flex-grow: 10;
     overflow: scroll;
 
+}
+
+.innerDisplay {
+
+    display: flex;
+    flex-direction: column;
 }
 
 .inputCHAT {
@@ -338,5 +343,7 @@ body {
 
     background-color: var(--CHATsecondaryColor);
 }
+
+
 
 /* MAIN CHAT */

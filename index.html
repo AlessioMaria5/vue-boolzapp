@@ -77,9 +77,13 @@
                 v-for="(elemento, index) in contacts" 
                 :class="contacts[index].visible == true?'hidden':'show'"
                 class="displayCHAT">
-                
-                    <div class="Umsg">Ciao</div>
-                    <div v-for="(elemento,msgindex) in contacts[index].messages"class="PCmsg">{{contacts[index].messages[msgindex].message}}</div>
+                    <div class="innerDisplay">
+                    <div v-for="(elemento,msgindex) in contacts[index].messages" 
+                        :class="contacts[index].messages[msgindex].status == 'sent'?'Umsg':'PCmsg'">
+                        {{contacts[index].messages[msgindex].message}}
+                    </div>
+                </div>
+                    
             </div>
             <div class="inputCHAT">
                 <button class="OP-btn"><i class="fa-solid fa-face-smile"></i></button>

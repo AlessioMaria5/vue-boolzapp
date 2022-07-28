@@ -191,6 +191,15 @@ var inizio = new Vue({
     
             
            
+        },
+
+        createMessage(){
+
+            let displayMessage = document.querySelector('innerDisplay');
+            console.log(displayMessage)
+
+            
+
         }
     }
 })
