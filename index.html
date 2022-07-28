@@ -86,8 +86,8 @@
                     
             </div>
             <div class="inputCHAT">
-                <button @click="sendMessage(myMsgValue)"  class="OP-btn"><i class="fa-solid fa-face-smile"></i></button>
-                <input class="myMessage" v-model="myMsgValue" type="text">
+                <button class="OP-btn"><i class="fa-solid fa-face-smile"></i></button>
+                <input @keyup.enter="sendMessage(myMsgValue)" class="myMessage" v-model="myMsgValue" type="text">
                 <button class="OP-btn"><i class="fa-solid fa-microphone"></i></button>
             </div>
         </section>

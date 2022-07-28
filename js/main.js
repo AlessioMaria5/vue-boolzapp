@@ -196,12 +196,12 @@ var inizio = new Vue({
 
         sendMessage(myMessage){
 
-            let ciao 
+            let myMsgs 
             for(let i = 0 ; i < this.contacts.length ; i++){
 
-                ciao =  this.contacts[i].messages
+                    myMsgs =  this.contacts[i].messages
                     if(this.contacts[i].visible == false){
-                        ciao.push( 
+                        myMsgs.push( 
                             {
                             date: '10/01/2020 15:30:55',
                             message: myMessage,
@@ -209,9 +209,20 @@ var inizio = new Vue({
                             },)
                        
                     }
-                
+
+                    let automaticMsg =  this.contacts[i].messages
+                    if(this.contacts[i].visible == false){
+                        automaticMsg.push( 
+                            {
+                            date: '10/01/2020 15:30:55',
+                            message: 'ok',
+                            status: 'received'
+                            },)
+                       
+                    }
+
             }
-            
+            this.myMsgValue = ""; 
         }
     }
 })
