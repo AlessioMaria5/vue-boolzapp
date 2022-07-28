@@ -209,18 +209,22 @@ var inizio = new Vue({
                             },)
                        
                     }
+                    setTimeout(() => {
+                        let automaticMsg =  this.contacts[i].messages
 
-                    let automaticMsg =  this.contacts[i].messages
-                    if(this.contacts[i].visible == false){
-                        automaticMsg.push( 
-                            {
-                            date: '10/01/2020 15:30:55',
-                            message: 'ok',
-                            status: 'received'
-                            },)
+                        if(this.contacts[i].visible == false){
                        
-                    }
-
+                            automaticMsg.push( 
+                                {
+                                date: '10/01/2020 15:30:55',
+                                message: 'ok',
+                                status: 'received'
+                                },)
+                           
+                        }
+                            
+                    }, 2000);
+                   
             }
             this.myMsgValue = ""; 
         }
