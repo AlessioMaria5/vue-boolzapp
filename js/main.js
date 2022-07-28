@@ -5,9 +5,11 @@ var inizio = new Vue({
     data: {
 
         myMsgValue: "",
+        mySearchValue: "",
         indiceDisplay: 0,
         contacts: [
-            {
+            {   
+                mySearch: true,
                 name: 'Michele',
                 avatar: 'img/avatar_1.jpg',
                 visible: false,
@@ -29,7 +31,8 @@ var inizio = new Vue({
             }
             ],
             },
-            {
+            {   
+                mySearch: true,
                 name: 'Fabio',
                 avatar: 'img/avatar_2.jpg',
                 visible: true,
@@ -52,6 +55,7 @@ var inizio = new Vue({
             ],
             },
             {
+            mySearch: true,
             name: 'Samuele',
             avatar: 'img/avatar_3.jpg',
             visible: true,
@@ -74,6 +78,7 @@ var inizio = new Vue({
             ],
             },
             {
+            mySearch: true,
             name: 'Alessandro B.',
             avatar: 'img/avatar_4.jpg',
             visible: true,
@@ -91,11 +96,14 @@ var inizio = new Vue({
             ],
             },
             {
+            mySearch: true,
             name: 'Alessandro L.',
             avatar: 'img/avatar_5.jpg',
             visible: true,
             messages: [
             {
+
+            mySearch: true,
             date: '10/01/2020 15:30:55',
             message: 'Ricordati di chiamare la nonna',
             status: 'sent'
@@ -108,6 +116,8 @@ var inizio = new Vue({
             ],
             },
             {
+            
+            mySearch: true,
             name: 'Claudia',
             avatar: 'img/avatar_6.jpg',
             visible: true,
@@ -130,6 +140,7 @@ var inizio = new Vue({
             ],
             },
             {
+            mySearch: true,
             name: 'Federico',
             avatar: 'img/avatar_7.jpg',
             visible: true,
@@ -147,6 +158,7 @@ var inizio = new Vue({
             ],
             },
             {
+            mySearch: true,
             name: 'Davide',
             avatar: 'img/avatar_8.jpg',
             visible: true,
@@ -172,7 +184,45 @@ var inizio = new Vue({
 
     },
 
+    computed: {
+
+        // searchEngine(mySearchValue){
+
+        //     for(let i = 0 ; i < this.contacts.length ; i++){
+        //         let myNames = this.contacts[i].name
+        //         myNames.filter(mySearchValue,i)
+        //     }
+
+        //     console.log('ciao')
+        // }
+    },
+
     methods: {
+
+        searchEngine(mySearchValue){            
+            for(let i = 0 ; i<this.contacts.length ; i++){
+
+                let myNames = this.contacts[i].name
+                console.log(myNames)
+                console.log(mySearchValue)
+               
+                let wow = function(){
+                   let ciao = this.contacts[i].name == mySearchValue?'true':'false';
+                    return ciao
+                }
+                
+                if(wow == this.contacts[i].mySearch){
+                    console.log('!!!!!!!!!!!!!!!!!!!!!')
+                }
+                
+                else {
+
+                    console.log('nope')
+                }
+            }
+           
+
+        },
 
         selectedCT(index) {
 
