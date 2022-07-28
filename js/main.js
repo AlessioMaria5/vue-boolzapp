@@ -4,6 +4,7 @@ var inizio = new Vue({
 
     data: {
 
+        myMsgValue: "",
         indiceDisplay: 0,
         contacts: [
             {
@@ -193,13 +194,24 @@ var inizio = new Vue({
            
         },
 
-        createMessage(){
+        sendMessage(myMessage){
 
-            let displayMessage = document.querySelector('innerDisplay');
-            console.log(displayMessage)
+            let ciao 
+            for(let i = 0 ; i < this.contacts.length ; i++){
 
+                ciao =  this.contacts[i].messages
+                    if(this.contacts[i].visible == false){
+                        ciao.push( 
+                            {
+                            date: '10/01/2020 15:30:55',
+                            message: myMessage,
+                            status: 'sent'
+                            },)
+                       
+                    }
+                
+            }
             
-
         }
     }
 })
