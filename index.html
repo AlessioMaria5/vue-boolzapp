@@ -79,7 +79,7 @@
                 class="displayCHAT">
                 
                     <div class="Umsg">Ciao</div>
-                    <div class="PCmsg">{{contacts[index].messages[1].message}}</div>
+                    <div v-for="(elemento,msgindex) in contacts[index].messages"class="PCmsg">{{contacts[index].messages[msgindex].message}}</div>
             </div>
             <div class="inputCHAT">
                 <button class="OP-btn"><i class="fa-solid fa-face-smile"></i></button>

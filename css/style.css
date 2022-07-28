@@ -250,6 +250,7 @@ body {
     flex-direction: column;
     background-image: url('../img/mine.jpg');
     flex-grow: 10;
+    overflow: scroll;
 
 }
 
