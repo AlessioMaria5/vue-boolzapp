@@ -43,19 +43,17 @@
                 <div 
                     class="CTC"  @click="selectedCT(CTindex)" 
                     v-for="(elemento, CTindex) in filteredSearch" 
-                    :class="{CTCmarked : contacts[CTindex].visible == false,
-                             beRed : contacts[CTindex].mySearch == contacts[CTindex].name,
-                             beGreen : contacts[CTindex].mySearch == true}"
+                    :class="{CTCmarked : contacts[CTindex].visible == false}"
                     >
                     
 
                     <div class="CTCavatar">
-                        <img :src="contacts[CTindex].avatar" :alt="contacts[CTindex].name">
+                        <img :src="elemento.avatar" :alt="contacts[CTindex].name">
                     </div>
 
                     <div class="CTnameMsg">
-                        <span class="CTCname">{{contacts[CTindex].name}}</span>
-                        <span class="CTlstmsg">Ultimo messaggio: {{contacts[CTindex].messages[1].message}}</span>
+                        <span class="CTCname">{{filteredSearch[CTindex].name}}</span>
+                        <span class="CTlstmsg">Ultimo messaggio: {{elemento.messages[1].message}}</span>
                     </div>
 
                     <div class="CTCdata-hh">

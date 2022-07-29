@@ -188,7 +188,7 @@ var inizio = new Vue({
 
         filteredSearch: function(){
             return this.contacts.filter((contatto)=>{
-                return 
+                return contatto.name.includes(this.mySearchValue)
             })
             
         }
@@ -197,27 +197,7 @@ var inizio = new Vue({
     },
 
     methods: {
-
-        
-
-        searchEngine(mySearchValue){   
-        
-            for(let i = 0; i<this.contacts.length;i++){
-                let ciao = this.contacts[i].name
-                console.log(ciao)
-                if(ciao.includes(mySearchValue) ){
-                    
-                    
-                }
-                   
-                }
-                // if(ciao[i][x].includes(mySearchValue)){
-                //     console.log('SI')
-                // }
-            
-            },
-        
-              
+                      
           
             // for(let i = 0 ; i<this.contacts.length ; i++){
 
