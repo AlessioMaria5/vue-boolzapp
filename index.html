@@ -38,8 +38,16 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <input v-model="mySearchValue" @keyup.enter="searchEngine(mySearchValue)" type="text">
             </div>
+
             <div class="CTlist">
-                <div class="CTC"  @click="selectedCT(CTindex)" v-for="(elemento, CTindex) in contacts" :class="contacts[CTindex].visible == true?'':'CTCmarked'">
+                <div 
+                    class="CTC"  @click="selectedCT(CTindex)" 
+                    v-for="(elemento, CTindex) in contacts" 
+                    :class="{CTCmarked : contacts[CTindex].visible == false,
+                             beRed : contacts[CTindex].name == mySearchValue}"
+                    >
+                    
+
                     <div class="CTCavatar">
                         <img :src="contacts[CTindex].avatar" :alt="contacts[CTindex].name">
                     </div>

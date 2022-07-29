@@ -158,7 +158,7 @@ var inizio = new Vue({
             ],
             },
             {
-            mySearch: true,
+            mySearch: false,
             name: 'Davide',
             avatar: 'img/avatar_8.jpg',
             visible: true,
@@ -185,58 +185,59 @@ var inizio = new Vue({
     },
 
     computed: {
-
-        // searchEngine(mySearchValue){
-
-        //     for(let i = 0 ; i < this.contacts.length ; i++){
-        //         let myNames = this.contacts[i].name
-        //         myNames.filter(mySearchValue,i)
-        //     }
-
-        //     console.log('ciao')
-        // }
+   
     },
 
     methods: {
 
-        searchEngine(mySearchValue){            
-            for(let i = 0 ; i<this.contacts.length ; i++){
+        
 
-                let myNames = this.contacts[i].name
-                console.log(myNames)
-                console.log(mySearchValue)
+        searchEngine(mySearchValue){   
+        
+            for(let i = 0; i<this.contacts.length;i++){
+                let ciao = this.contacts[i].name
+                console.log(ciao)
+                if(ciao.includes(mySearchValue)){
+                    console.log('si');
+                }
+                   
+                }
+                // if(ciao[i][x].includes(mySearchValue)){
+                //     console.log('SI')
+                // }
+            
+            },
+        
+              
+          
+            // for(let i = 0 ; i<this.contacts.length ; i++){
+
+            //     let myNames = this.contacts[i].name
+                
+            //     console.log(myNames)
+            //     console.log(mySearchValue)
                
-                let wow = function(){
-                   let ciao = this.contacts[i].name == mySearchValue?'true':'false';
-                    return ciao
-                }
+            //     let myMatch = this.contacts[i].name == mySearchValue?true:false;
+            //     console.log(myMatch)
                 
-                if(wow == this.contacts[i].mySearch){
-                    console.log('!!!!!!!!!!!!!!!!!!!!!')
-                }
-                
-                else {
+            // }
 
-                    console.log('nope')
-                }
-            }
-           
+            // return myMatch
+            
 
-        },
+        // },
 
         selectedCT(index) {
 
             for(let i = 0 ; i < this.contacts.length ; i++){
 
                 if(this.contacts[i].visible == false){
-                    this.contacts[i].visible = true
-                        
+                    this.contacts[i].visible = true                  
                 }
                
             }
 
             if(this.contacts[index].visible == true) {
-
                 this.contacts[index].visible = false
             }
     
@@ -273,7 +274,7 @@ var inizio = new Vue({
                            
                         }
                             
-                    }, 2000);
+                    }, 1000);
                    
             }
             this.myMsgValue = ""; 

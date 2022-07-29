@@ -344,6 +344,9 @@ body {
     background-color: var(--CHATsecondaryColor);
 }
 
+.beRed {
 
+    background-color: red;
+}
 
 /* MAIN CHAT */
