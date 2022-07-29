@@ -42,7 +42,7 @@
             <div class="CTlist">
                 <div 
                     class="CTC"  @click="selectedCT(CTindex)" 
-                    v-for="(elemento, CTindex) in contacts" 
+                    v-for="(elemento, CTindex) in filteredSearch" 
                     :class="{CTCmarked : contacts[CTindex].visible == false,
                              beRed : contacts[CTindex].mySearch == contacts[CTindex].name,
                              beGreen : contacts[CTindex].mySearch == true}"

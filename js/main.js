@@ -185,6 +185,14 @@ var inizio = new Vue({
     },
 
     computed: {
+
+        filteredSearch: function(){
+            return this.contacts.filter((contatto)=>{
+                return 
+            })
+            
+        }
+
    
     },
 
