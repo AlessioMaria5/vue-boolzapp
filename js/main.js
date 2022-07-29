@@ -188,7 +188,7 @@ var inizio = new Vue({
 
         filteredSearch: function(){
             return this.contacts.filter((contatto)=>{
-                return contatto.name.includes(this.mySearchValue)
+                return contatto.name.toLowerCase().includes(this.mySearchValue.toLowerCase())
             })
             
         }
@@ -197,7 +197,7 @@ var inizio = new Vue({
     },
 
     methods: {
-        
+
         selectedCT(index) {
 
             for(let i = 0 ; i < this.contacts.length ; i++){
