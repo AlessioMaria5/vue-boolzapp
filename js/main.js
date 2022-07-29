@@ -197,8 +197,9 @@ var inizio = new Vue({
             for(let i = 0; i<this.contacts.length;i++){
                 let ciao = this.contacts[i].name
                 console.log(ciao)
-                if(ciao.includes(mySearchValue)){
-                    console.log('si');
+                if(ciao.includes(mySearchValue) ){
+                    
+                    
                 }
                    
                 }
