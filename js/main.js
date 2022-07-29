@@ -197,25 +197,7 @@ var inizio = new Vue({
     },
 
     methods: {
-                      
-          
-            // for(let i = 0 ; i<this.contacts.length ; i++){
-
-            //     let myNames = this.contacts[i].name
-                
-            //     console.log(myNames)
-            //     console.log(mySearchValue)
-               
-            //     let myMatch = this.contacts[i].name == mySearchValue?true:false;
-            //     console.log(myMatch)
-                
-            // }
-
-            // return myMatch
-            
-
-        // },
-
+        
         selectedCT(index) {
 
             for(let i = 0 ; i < this.contacts.length ; i++){

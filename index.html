@@ -43,7 +43,7 @@
                 <div 
                     class="CTC"  @click="selectedCT(CTindex)" 
                     v-for="(elemento, CTindex) in filteredSearch" 
-                    :class="{CTCmarked : contacts[CTindex].visible == false}"
+                    :class="{CTCmarked : elemento.visible == false}"
                     >
                     
 
@@ -52,7 +52,7 @@
                     </div>
 
                     <div class="CTnameMsg">
-                        <span class="CTCname">{{filteredSearch[CTindex].name}}</span>
+                        <span class="CTCname">{{elemento.name}}</span>
                         <span class="CTlstmsg">Ultimo messaggio: {{elemento.messages[1].message}}</span>
                     </div>
 
